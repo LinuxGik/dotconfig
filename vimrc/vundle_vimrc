@@ -1,0 +1,56 @@
+" УСТАНОВКА Vundle - менеджер плагинов для vim
+"
+" 1. git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+" 2. В командном режиме :PluginInstall
+"
+"
+
+" НЕОБХОДИМЫ НАСТРОЙКИ ДЛЯ Vundle (исходя из официальной инструкции)
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+
+" СЕКЦИЯ ГДЕ ПРОПИСЫВАТСЯ ПЛАГИНЫ
+
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'       " Обязательный плагин, далее уже свои плагины
+
+" Плагин с темой сodedark
+Plugin 'tomasiser/vim-code-dark'
+
+" Плагин с темой oceanic-next
+Plugin 'mhartington/oceanic-next'
+
+" Плагин vim-aairline
+Plugin 'vim-airline/vim-airline'
+
+
+
+call vundle#end()            " required
+filetype plugin indent on    " Обязательно
+
+" Подключаем тему, плангин которой установили
+colorscheme OceanicNext
+
+
+
+" Ниже тоже что в minimal_vimrc
+" НАСТРОЙКА ТАБОВ И ОТСТУПОВ
+set tabstop=3                   " Ширина тубуляции
+set shiftwidth=3                " Ширина отступов для операторов >> и <<. (это когда в командном режиме нажимаем два раза ">" (т.е. получается что ">>")).
+set expandtab                   " Заменяем tab`ы пробелами
+set smarttab
+set softtabstop=3               " 3 пробела в табе
+
+"ВКЛЮЧАЕМ ПОДСВЕТКУ СИНТАКСИСА
+syntax on
+
+" ВКЛЮЧАЕМ АВТОМАТИЧЕСКИЕ ОТСТУПЫ
+set autoindent                  " Копирует отступы с текущей строки на новую
+set smartindent                 " Добавляет дополнительные отступы для блоков кода (например после "{" в Си)
+
+" НУМЕРАЦИЯ СТРОК
+set nu                          " Включаем нумерацию строк
+
+" ОТКЛЮЧАЕМ ПОДСВЕТКУ ПОИСКА    
+set nohlsearch
