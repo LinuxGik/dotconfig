@@ -25,6 +25,10 @@ foreground = "0xB3B1AD"
 [font]
 size = 11
 
+[font.normal]
+family = "Anka/Coder"
+style = "Regular"
+
 [[keyboard.bindings]]
 action = "SpawnNewInstance"
 key = "N"
